@@ -1,0 +1,145 @@
+@import './sass/variables.scss';
+$var1: #2F303A;
+$var2: #FFFFFF;
+$var3: #2196F3;
+$var4: #212121;
+
+.header {
+  margin-top: 32px;
+  @extend %flex-container; // Використовуємо placeholder
+  &_logo {
+    margin-left: 215px;
+  }
+}
+
+hr {
+  width: 3000px;
+  height: 5px;
+}
+
+.menu-list {
+  margin-top: -20px;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  color: black;
+  cursor: pointer;
+  gap: 50px;
+  list-style: none;
+
+  .menu-item {
+    font-size: 14px;
+    @include %hover-effect; 
+  }
+  &:hover,
+  &:focus {
+    color: blue;
+    transition: color $transition-duration $transition-timing-function;
+  }
+}
+}
+
+.contacts {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -50px;
+  margin-right: 215px;
+  gap: 50px;
+  cursor: pointer;
+
+  &-item:hover {
+    color: blue;
+  }
+}
+
+.section {
+  height: 600px;
+  background: $var1;
+
+  &2 {
+    margin-top: 92px;
+    display: flex;
+    gap: 30px;
+
+    &-item {
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+
+  &3 {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+
+    &_word {
+      display: flex;
+      position: absolute;
+      top: 1300px;
+      gap: 220px;
+      color: white;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.main_word {
+  margin-top: 200px;
+  width: 696px;
+  font-family: $main-color;
+  font-size: 44px;
+  color: $secodn-color;
+}
+
+.button {
+  border-radius: 4px;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 216px;
+  height: 50px;
+  margin-left: 1160px;
+
+  &:hover,
+  &:focus {
+    background: darken($accent-color, 10%); // Приклад зміни кольору при ховері
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2); // Зміна тіні при ховері
+    transition: background $transition-duration $transition-timing-function,
+                box-shadow $transition-duration $transition-timing-function;
+  }
+
+  &_link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: darken($accent-color, 20%); // Приклад зміни кольору тексту при ховері
+      transition: color $transition-duration $transition-timing-function;
+    }
+  }
+}
+
+.main-word {
+  display: flex;
+  justify-content: center;
+  font-family: $color-fonts;
+  margin-top: 118px;
+  font-size: 36px;
+  color: $text-color;
+}
+
+.footer {
+  display: flex;
+  background: $main-color;
+  height: 252px;
+
+  &_container {
+    margin-left: 215px;
+    margin-top: 60px;
+  }
+}
